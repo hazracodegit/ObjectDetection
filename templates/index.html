@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Object Detection Pro</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>AI Object Detection Pro</h1>
+
+        <button onclick="toggleTheme()">
+            Toggle Theme
+        </button>
+    </div>
+
+    <div class="main">
+
+        <div class="upload-panel">
+
+            <h2>Upload Image</h2>
+
+            <form id="uploadForm">
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    required
+                >
+
+                <button type="submit">
+                    Detect Objects
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="result-panel">
+
+            <h2>Detection Result</h2>
+
+            <img id="resultImage">
+
+            <div id="objects"></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
